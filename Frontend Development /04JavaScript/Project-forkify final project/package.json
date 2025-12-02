@@ -1,0 +1,20 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "recipe application",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Ismail tarek",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.16.0",
+    "sass": "^1.93.2"
+  },
+  "dependencies": {
+    "core-js": "^3.46.0",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
