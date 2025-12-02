@@ -1,0 +1,68 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  background-color: rgba($white-color, 0.7);
+  padding: 6rem;
+  padding-left: 9rem;
+  box-shadow: 0 1.5rem 4rem rgba($black-color, 0.15);
+  border-radius: 6px;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 6rem;
+  }
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+  &-shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    // background-color: red;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
+  }
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.4);
+    transition: all 0.4s;
+    // transform: skewX(12deg);
+  }
+  &-text {
+    transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
+  }
+  &-caption {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $white-color;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    back-face-visibility: hidden;
+    transition: all 0.4s;
+  }
+  &:hover &-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  &:hover &-image {
+    transform: scale(1);
+    filter: blur(2px) brightness(70%);
+  }
+}

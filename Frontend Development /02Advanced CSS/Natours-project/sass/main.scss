@@ -1,0 +1,58 @@
+@import "base/base";
+@import "base/animation";
+@import "base/typography";
+@import "base/utilities";
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "pages/home";
+@import "components/button";
+
+@import "layouts/grid";
+@import "layouts/footer";
+@import "layouts/navigation";
+
+@import "components/composition";
+
+@import "components/feature-box";
+
+@import "components/card";
+
+@import "components/story";
+@import "components/video";
+@import "components/form";
+@import "components/popup";
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($primary-color-light, 0.7),
+      rgba($primary-color, 0.7)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
+.logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.logo {
+  height: 3.5rem;
+}
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
