@@ -272,31 +272,6 @@ Great for performance reviews or grant applications!
 - Every project must receive funding from at least one grant
 - Every publication must have at least one university author
 
----
-
-## Common Questions
-
-### Q: Why don't we link publications directly to projects?
-
-The requirements didn't specify this relationship. In reality, publications often result from projects, but we'd need to infer this through shared researchers or add it as an enhancement later.
-
-### Q: Why is "Grant" called "Grant_Table" in the database?
-
-"GRANT" is a reserved word in SQL (it's a command for giving permissions). To avoid confusion, we named our table "Grant_Table" instead.
-
-### Q: What happens if a researcher leaves the university?
-
-It depends:
-- If they're leading active projects: We can't delete them (database prevents it)
-- If they're just a team member: Their participation records remain for history
-- Their phone numbers and research areas get deleted automatically (CASCADE delete)
-
-### Q: Can a publication have only external authors?
-
-No—every publication must have at least one author from our university. That's enforced by requiring at least one record in the Authors table for each publication.
-
----
-
 ## Summary
 
 We've designed a database with **14 tables** that work together:
