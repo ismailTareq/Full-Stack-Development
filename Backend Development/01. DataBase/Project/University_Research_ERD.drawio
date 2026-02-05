@@ -1,0 +1,176 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.7">
+  <diagram name="University Research ERD - Standard Notation" id="university-research-erd-standard">
+    <mxGraphModel dx="1503" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1500" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EvyQxdbpukOfDr3rDFla-2" edge="1" parent="1" source="researcher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="project">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="researcher" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="RESEARCHER" vertex="1">
+          <mxGeometry height="320" width="220" x="100" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="researcher-attrs" parent="researcher" style="text;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK: researcher_id&#xa;    email&#xa;    date_of_birth&#xa;    first_name&#xa;    middle_name&#xa;    last_name&#xa;    building_name&#xa;    room_number&#xa;&#xa;Multivalued:&#xa;    phone_numbers&#xa;    research_areas&#xa;&#xa;Derived:&#xa;    age (from date_of_birth)" vertex="1">
+          <mxGeometry height="294" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="project" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="PROJECT" vertex="1">
+          <mxGeometry height="220" width="220" x="650" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="project-attrs" parent="project" style="text;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK: project_id&#xa;    title&#xa;    start_date&#xa;    end_date&#xa;    budget&#xa;    status&#xa;FK: lead_researcher_id&#xa;&#xa;Multivalued:&#xa;    keywords&#xa;&#xa;Derived:&#xa;    duration_months" vertex="1">
+          <mxGeometry height="194" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="publication" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="PUBLICATION" vertex="1">
+          <mxGeometry height="230" width="220" x="1220" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="publication-attrs" parent="publication" style="text;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK: publication_id&#xa;    title&#xa;    publication_date&#xa;    doi&#xa;    type (Journal/Conference)&#xa;    citation_count&#xa;&#xa;Multivalued:&#xa;    keywords&#xa;    all_author_names" vertex="1">
+          <mxGeometry height="204" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="grant" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="GRANT" vertex="1">
+          <mxGeometry height="200" width="220" x="650" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="grant-attrs" parent="grant" style="text;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK: grant_id&#xa;    grant_name&#xa;    amount&#xa;    start_date&#xa;    end_date&#xa;    funding_agency&#xa;&#xa;Derived:&#xa;    grant_period_months" vertex="1">
+          <mxGeometry height="174" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="supervises" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" value="SUPERVISES" vertex="1">
+          <mxGeometry height="80" width="160" x="120" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="supervises-attrs" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="start_date&#xa;supervision_type" vertex="1">
+          <mxGeometry height="60" width="130" x="400" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="leads" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" value="LEADS" vertex="1">
+          <mxGeometry height="70" width="120" x="435" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="works-on" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" value="WORKS_ON" vertex="1">
+          <mxGeometry height="80" width="140" x="425" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="works-on-attrs" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="join_date&#xa;role&#xa;hours_per_week&#xa;credit_percentage" vertex="1">
+          <mxGeometry height="80" width="130" x="425" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="EvyQxdbpukOfDr3rDFla-3" edge="1" parent="1" source="authors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="project">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="authors" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" value="AUTHORS" vertex="1">
+          <mxGeometry height="70" width="140" x="920" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="authors-attrs" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="author_position&#xa;contribution_type" vertex="1">
+          <mxGeometry height="60" width="130" x="925" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="funded-by" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" value="FUNDED_BY" vertex="1">
+          <mxGeometry height="80" width="140" x="690" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="funded-by-attrs" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="allocated_amount&#xa;allocation_date" vertex="1">
+          <mxGeometry height="60" width="140" x="870" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-supervises-supervisor" edge="1" parent="1" source="researcher-attrs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="supervises">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="341" />
+              <mxPoint x="50" y="530" />
+              <mxPoint x="200" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-supervises-supervisee" edge="1" parent="1" source="supervises" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="researcher-attrs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="680" />
+              <mxPoint x="50" y="680" />
+              <mxPoint x="50" y="293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-supervisor" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="M" vertex="1">
+          <mxGeometry height="30" width="30" x="30" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="label-supervisee" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="1" vertex="1">
+          <mxGeometry height="30" width="30" x="30" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-supervises-attrs" edge="1" parent="1" source="supervises" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;endArrow=none;endFill=0;" target="supervises-attrs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-leads-researcher" edge="1" parent="1" source="researcher-attrs" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="leads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-leads-project" edge="1" parent="1" source="leads" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="project-attrs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-leads-researcher" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="1" vertex="1">
+          <mxGeometry height="30" width="30" x="360" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="label-leads-project" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="M" vertex="1">
+          <mxGeometry height="30" width="30" x="600" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-works-on-researcher" edge="1" parent="1" source="researcher-attrs" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="works-on">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-works-on-project" edge="1" parent="1" source="works-on" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="project-attrs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-works-on-researcher" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="M" vertex="1">
+          <mxGeometry height="30" width="30" x="360" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="label-works-on-project" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="M" vertex="1">
+          <mxGeometry height="30" width="30" x="600" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-works-on-attrs" edge="1" parent="1" source="works-on" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;endArrow=none;endFill=0;" target="works-on-attrs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-authors-publication" edge="1" parent="1" source="authors" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="publication-attrs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-authors-researcher" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="M" vertex="1">
+          <mxGeometry height="30" width="30" x="830" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="label-authors-publication" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="M" vertex="1">
+          <mxGeometry height="30" width="30" x="1150" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-authors-attrs" edge="1" parent="1" source="authors" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;endArrow=none;endFill=0;" target="authors-attrs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-funded-by-project" edge="1" parent="1" source="project-attrs" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="funded-by">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-funded-by-grant" edge="1" parent="1" source="funded-by" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="grant">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-funded-by-project" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="M" vertex="1">
+          <mxGeometry height="30" width="30" x="780" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="label-funded-by-grant" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" value="M" vertex="1">
+          <mxGeometry height="30" width="30" x="780" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-funded-by-attrs" edge="1" parent="1" source="funded-by" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;endArrow=none;endFill=0;" target="funded-by-attrs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rules-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="" vertex="1">
+          <mxGeometry height="760" width="620" x="1520" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rules-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;" value="ER-TO-RELATIONAL MAPPING RULES" vertex="1">
+          <mxGeometry height="30" width="620" x="1520" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="application-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="360" width="580" x="1540" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="application-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=13;" value="HOW I APPLIED THE RULES" vertex="1">
+          <mxGeometry height="20" width="580" x="1540" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="application-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="1. SUPERVISES (Researcher ↔ Researcher)&lt;br&gt;  Type: M M (recursive)&lt;br&gt;  Applied: 3 Tables with Composite PK (supervisor_id, supervisee_id)&lt;br&gt;&lt;br&gt;2. LEADS (Researcher → Project)&lt;br&gt;  Type: 1 M&lt;br&gt;  Applied: 2 Tables, PK of Researcher as FK in Project&lt;br&gt;&lt;br&gt;3. WORKS_ON (Researcher ↔ Project)&lt;br&gt;  Type: M M&lt;br&gt;  Applied: 3 Tables with Composite PK (researcher_id, project_id)&lt;br&gt;&lt;br&gt;4. AUTHORS (Researcher ↔ Publication)&lt;br&gt;  Type: M M&lt;br&gt;  Applied: 3 Tables with Composite PK (researcher_id, publication_id)&lt;br&gt;&lt;br&gt;5. FUNDED_BY (Grant ↔ Project)&lt;br&gt;  Type: M M&lt;br&gt;  Applied: 3 Tables with Composite PK (grant_id, project_id)" vertex="1">
+          <mxGeometry height="280" width="540" x="1560" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-final-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="260" width="580" x="1540" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-final-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=13;" value="RESULT: 14 TABLES TOTAL" vertex="1">
+          <mxGeometry height="20" width="580" x="1540" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="summary-final-content" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" value="Entity Tables (4):&#xa;• Researcher, Project, Publication, Grant_Table&#xa;&#xa;Relationship Tables (5):&#xa;• Supervises — M M relationship (recursive)&#xa;• Works_On — M M relationship&#xa;• Authors — M M relationship&#xa;• Funded_By — M M relationship&#xa;• (LEADS — 1 M relationship, implemented as FK in Project)&#xa;&#xa;Multivalued Attribute Tables (5):&#xa;• Researcher_Phone, Researcher_Area&#xa;• Project_Keyword&#xa;• Publication_Keyword, Publication_All_Authors" vertex="1">
+          <mxGeometry height="200" width="540" x="1550" y="590" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
