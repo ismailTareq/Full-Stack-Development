@@ -1,0 +1,14 @@
+C:\Users\ismail\Downloads\Works\ShopMaster\bin\Debug\net9.0\ShopMaster.exe
+C:\Users\ismail\Downloads\Works\ShopMaster\bin\Debug\net9.0\ShopMaster.deps.json
+C:\Users\ismail\Downloads\Works\ShopMaster\bin\Debug\net9.0\ShopMaster.runtimeconfig.json
+C:\Users\ismail\Downloads\Works\ShopMaster\bin\Debug\net9.0\ShopMaster.dll
+C:\Users\ismail\Downloads\Works\ShopMaster\bin\Debug\net9.0\ShopMaster.pdb
+C:\Users\ismail\Downloads\Works\ShopMaster\obj\Debug\net9.0\ShopMaster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ismail\Downloads\Works\ShopMaster\obj\Debug\net9.0\ShopMaster.AssemblyInfoInputs.cache
+C:\Users\ismail\Downloads\Works\ShopMaster\obj\Debug\net9.0\ShopMaster.AssemblyInfo.cs
+C:\Users\ismail\Downloads\Works\ShopMaster\obj\Debug\net9.0\ShopMaster.csproj.CoreCompileInputs.cache
+C:\Users\ismail\Downloads\Works\ShopMaster\obj\Debug\net9.0\ShopMaster.dll
+C:\Users\ismail\Downloads\Works\ShopMaster\obj\Debug\net9.0\refint\ShopMaster.dll
+C:\Users\ismail\Downloads\Works\ShopMaster\obj\Debug\net9.0\ShopMaster.pdb
+C:\Users\ismail\Downloads\Works\ShopMaster\obj\Debug\net9.0\ShopMaster.genruntimeconfig.cache
+C:\Users\ismail\Downloads\Works\ShopMaster\obj\Debug\net9.0\ref\ShopMaster.dll
