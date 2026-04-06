@@ -1,0 +1,14 @@
+C:\Users\ismail\Downloads\Works\AdvOOP3\bin\Debug\net9.0\AdvOOP3.exe
+C:\Users\ismail\Downloads\Works\AdvOOP3\bin\Debug\net9.0\AdvOOP3.deps.json
+C:\Users\ismail\Downloads\Works\AdvOOP3\bin\Debug\net9.0\AdvOOP3.runtimeconfig.json
+C:\Users\ismail\Downloads\Works\AdvOOP3\bin\Debug\net9.0\AdvOOP3.dll
+C:\Users\ismail\Downloads\Works\AdvOOP3\bin\Debug\net9.0\AdvOOP3.pdb
+C:\Users\ismail\Downloads\Works\AdvOOP3\obj\Debug\net9.0\AdvOOP3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ismail\Downloads\Works\AdvOOP3\obj\Debug\net9.0\AdvOOP3.AssemblyInfoInputs.cache
+C:\Users\ismail\Downloads\Works\AdvOOP3\obj\Debug\net9.0\AdvOOP3.AssemblyInfo.cs
+C:\Users\ismail\Downloads\Works\AdvOOP3\obj\Debug\net9.0\AdvOOP3.csproj.CoreCompileInputs.cache
+C:\Users\ismail\Downloads\Works\AdvOOP3\obj\Debug\net9.0\AdvOOP3.dll
+C:\Users\ismail\Downloads\Works\AdvOOP3\obj\Debug\net9.0\refint\AdvOOP3.dll
+C:\Users\ismail\Downloads\Works\AdvOOP3\obj\Debug\net9.0\AdvOOP3.pdb
+C:\Users\ismail\Downloads\Works\AdvOOP3\obj\Debug\net9.0\AdvOOP3.genruntimeconfig.cache
+C:\Users\ismail\Downloads\Works\AdvOOP3\obj\Debug\net9.0\ref\AdvOOP3.dll
