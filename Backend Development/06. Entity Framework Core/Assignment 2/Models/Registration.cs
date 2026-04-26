@@ -1,0 +1,15 @@
+// Badge 3ndha M-M relationship m3 Attendee wl Event
+
+namespace EventHub.Models;
+
+public class Registration
+{
+    public int AttendeeId { get; set; }
+    public Attendee Attendee { get; set; } = null!;
+
+    public int EventId { get; set; }
+    public Event Event { get; set; } = null!;
+
+    public string? Note { get; set; }
+    public DateTime RegisteredAt { get; set; }
+}
